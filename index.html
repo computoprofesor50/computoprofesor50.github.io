@@ -1,0 +1,226 @@
+<html><head><base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Cuts - Peluquería & Barbería</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #2c3e50;
+            --secondary: #c0392b;
+            --light: #ecf0f1;
+        }
+
+        body {
+            background-color: var(--light);
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMyYzNlNTAiLz48L3N2Zz4=');
+            height: 100vh;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding-top: 40vh;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+
+        .services {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .scissors-icon {
+            font-size: 40px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #a93226;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating-scissors {
+            animation: float 3s ease-in-out infinite;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#reservas">Reservas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <h1>Elegant Cuts</h1>
+        <p>Peluquería & Barbería de Elite</p>
+        <a href="#reservas" class="cta-button">Reserva tu cita</a>
+    </header>
+
+    <section class="services" id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="scissors-icon floating-scissors">✂️</div>
+                <h3>Corte de Cabello</h3>
+                <p>Cortes modernos y clásicos para todo tipo de cabello</p>
+                <p class="price">Desde $20</p>
+            </div>
+            <div class="service-card">
+                <div class="scissors-icon floating-scissors">💈</div>
+                <h3>Afeitado Clásico</h3>
+                <p>Afeitado tradicional con navaja y toalla caliente</p>
+                <p class="price">Desde $25</p>
+            </div>
+            <div class="service-card">
+                <div class="scissors-icon floating-scissors">🧔</div>
+                <h3>Arreglo de Barba</h3>
+                <p>Perfilado y mantenimiento de barba</p>
+                <p class="price">Desde $15</p>
+            </div>
+            <div class="service-card">
+                <div class="scissors-icon floating-scissors">🎨</div>
+                <h3>Tinte y Color</h3>
+                <p>Coloración profesional y mechas</p>
+                <p class="price">Desde $40</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservas" style="text-align: center; padding: 80px 20px;">
+        <h2>Reserva tu Cita</h2>
+        <form style="max-width: 500px; margin: 40px auto;">
+            <div style="margin-bottom: 20px;">
+                <input type="text" placeholder="Nombre" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <input type="email" placeholder="Email" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <input type="tel" placeholder="Teléfono" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <select style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    <option value="">Selecciona el servicio</option>
+                    <option value="corte">Corte de Cabello</option>
+                    <option value="afeitado">Afeitado Clásico</option>
+                    <option value="barba">Arreglo de Barba</option>
+                    <option value="tinte">Tinte y Color</option>
+                </select>
+            </div>
+            <button type="submit" class="cta-button">Reservar Ahora</button>
+        </form>
+    </section>
+
+    <footer style="background-color: var(--primary); color: white; padding: 40px 20px; text-align: center;">
+        <h3>Elegant Cuts</h3>
+        <p>Dirección: Calle Principal 123, Ciudad</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <p>Email: info@elegantcuts.com</p>
+        <div style="margin-top: 20px;">
+            <a href="https://facebook.com" style="color: white; margin: 0 10px;"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" style="color: white; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" style="color: white; margin: 0 10px;"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling para los enlaces del menú
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animación del menú al hacer scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.backgroundColor = 'rgba(0,0,0,0.9)';
+            } else {
+                nav.style.backgroundColor = 'rgba(0,0,0,0.7)';
+            }
+        });
+    </script>
+</body>
+</html>
